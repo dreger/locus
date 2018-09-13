@@ -1,0 +1,42 @@
+body {
+  background: #f1f2f3;
+  text-rendering: optimizeLegibility;
+    font-family: -apple-system, 'BlinkMacSystemFont', 'Helvetica Neue', 'Helvetica', Arial, sans-serif; 
+}
+
+.grid-container {
+  display: grid;
+  grid-auto-flow: column;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: .2fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem 1rem;
+  grid-template-areas: "header header header" "total . ." "total . ." "total . ." "total . ." "footer footer footer";
+}
+
+.header { 
+  grid-area: header; 
+}
+.total { grid-area: total; }
+.footer { grid-area: footer; }
+
+.level-of-care {
+  padding: .5rem 1rem; 
+  border: solid 4px transparent; 
+  border-radius: 8px; 
+}
+.level-of-care--active {
+  border-color: blue;
+}
+
+.radio-group {
+  background: white; 
+  padding: 1rem; 
+  border-radius: 4px; 
+}
+
+.radio {
+
+  background: #fff;
+  margin-bottom: 4px;
+}

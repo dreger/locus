@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="app.css">
+  <script src="app.js"></script>
+  <style>
+    .control {
+      display: block; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="header">
+      <h2>Composite: <span id="compositeScore"></span> </h2>      
+    </div>
+
+    <div class="total">
+      <div class="levels-of-care">
+        <div class="level-of-care level-of-care-0 level-of-care--active">N/A</div>
+        <div class="level-of-care level-of-care-1">Recovery Maintenance Health Management</div>
+        <div class="level-of-care level-of-care-2">Outpatient</div>
+        <div class="level-of-care level-of-care-3">Intensive Outpatien</div>
+        <div class="level-of-care level-of-care-4">Intesively Integrated w/o 24-hr Psych Mon.</div>
+        <div class="level-of-care level-of-care-5">Non-Secure 24-hr Services with Psych Mon.</div>
+        <div class="level-of-care level-of-care-6">Secure 24-hr Services with Psych Management</div>
+      </div>
+    </div>
+
+    <div class="radio-group riskOfHarm">
+      <h2>I. Risk of Harm</h2>
+      <label class="control radio">
+        <input type="radio" value="1" name="riskOfHarm" checked>
+        <span class="control-indicator"></span>
+        1. Low Potential for Risk of Harm 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="2" name="riskOfHarm">
+        <span class="control-indicator"></span>
+        2. Some Potential for Risk of Harm 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="3" name="riskOfHarm">
+        <span class="control-indicator"></span>
+        3. Significant Potential for Risk of Harm 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="4" name="riskOfHarm">
+        <span class="control-indicator"></span>
+        4. Serious Potential for Risk of Harm 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="5" name="riskOfHarm">
+        <span class="control-indicator"></span>
+        5. Extreme Potential for Risk of Harm 
+      </label>
+    </div>
+
+    <div class="radio-group functionalStatus">
+      <h2>II. Functional Status</h2>
+      <label class="control radio">
+        <input type="radio" value="1" name="functionalStatus" checked>
+        <span class="control-indicator"></span>
+        1. Minimal Impairment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="2" name="functionalStatus">
+        <span class="control-indicator"></span>
+        2. Mild Impairment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="3" name="functionalStatus">
+        <span class="control-indicator"></span>
+        3. Moderate Impairment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="4" name="functionalStatus">
+        <span class="control-indicator"></span>
+        4. Serious Impairment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="5" name="functionalStatus">
+        <span class="control-indicator"></span>
+        5. Severe Impairment 
+      </label>
+    </div>
+
+    <div class="radio-group coMorbidity">
+      <h2>III. Co-Morbidity</h2>
+      <label class="control radio">
+        <input type="radio" value="1" name="coMorbidity" checked>
+        <span class="control-indicator"></span>
+        1. No Co-Morbidity 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="2" name="coMorbidity">
+        <span class="control-indicator"></span>
+        2. Minor Co-Morbidity 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="3" name="coMorbidity">
+        <span class="control-indicator"></span>
+        3. Significant Co-Morbidity 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="4" name="coMorbidity">
+        <span class="control-indicator"></span>
+        4. Major Co-Morbidity 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="5" name="coMorbidity">
+        <span class="control-indicator"></span>
+        5. Severe Co-Morbidity
+      </label>
+    </div>
+
+    <div class="radio-group recoveryEnvironmentStress">
+      <h2>IV-A. Recovery Environment - Level of Stress </h2>
+      <label class="control radio">
+        <input type="radio" value="1" name="recoveryEnvironmentStress" checked>
+        <span class="control-indicator"></span>
+        1. Minimally Stressful Environment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="2" name="recoveryEnvironmentStress">
+        <span class="control-indicator"></span>
+        2. Mildly Stressful Environment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="3" name="recoveryEnvironmentStress">
+        <span class="control-indicator"></span>
+        3. Moderately Stressful Environment
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="4" name="recoveryEnvironmentStress">
+        <span class="control-indicator"></span>
+        4. Highly Stressful Environment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="5" name="recoveryEnvironmentStress">
+        <span class="control-indicator"></span>
+        5. Extremely Stressful Environment 
+      </label>
+    </div>
+
+    <div class="radio-group recoveryEnvironmentSupport">
+      <h2>IV-B. Recovery Environment - Level of Support </h2>
+      <label class="control radio">
+        <input type="radio" value="1" name="recoveryEnvironmentSupport" checked>
+        <span class="control-indicator"></span>
+        1. Highly Supportive Environment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="2" name="recoveryEnvironmentSupport">
+        <span class="control-indicator"></span>
+        2. Supportive Environment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="3" name="recoveryEnvironmentSupport">
+        <span class="control-indicator"></span>
+        3. Limited Support in Environment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="4" name="recoveryEnvironmentSupport">
+        <span class="control-indicator"></span>
+        4. Minimal Support in Environment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="5" name="recoveryEnvironmentSupport">
+        <span class="control-indicator"></span>
+        5. No Support in Environment  
+      </label>
+    </div>
+
+    <div class="radio-group resiliencyAndTreatmentHistory">
+      <h2>V. Resiliency and Treatment History </h2>
+      <label class="control radio">
+        <input type="radio" value="1" name="resiliencyAndTreatmentHistory" checked>
+        <span class="control-indicator"></span>
+        1. Full Response to Treatment  
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="2" name="resiliencyAndTreatmentHistory">
+        <span class="control-indicator"></span>
+        2. Significantly Resilient and/or Response to Treatment 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="3" name="resiliencyAndTreatmentHistory">
+        <span class="control-indicator"></span>
+        3. Moderate or Equivocal Response to Treatment And Recovery Management 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="4" name="resiliencyAndTreatmentHistory">
+        <span class="control-indicator"></span>
+        4. Poor Response to Treatment and Recovery Management
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="5" name="resiliencyAndTreatmentHistory">
+        <span class="control-indicator"></span>
+        5. Negligible Response to Treatment 
+      </label>
+    </div>
+
+    <div class="radio-group acceptanceAndEngagementChildAdolescent">
+      <h2>VI-A. Acceptance and Engagement - Child/Adolescent </h2>
+      <label class="control radio">
+        <input type="radio" value="1" name="acceptanceAndEngagementChildAdolescent" checked>
+        <span class="control-indicator"></span>
+        1. Optimal  
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="2" name="acceptanceAndEngagementChildAdolescent">
+        <span class="control-indicator"></span>
+        2. Constructive 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="3" name="acceptanceAndEngagementChildAdolescent">
+        <span class="control-indicator"></span>
+        3. Obstructive
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="4" name="acceptanceAndEngagementChildAdolescent">
+        <span class="control-indicator"></span>
+        4. Destructive 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="5" name="acceptanceAndEngagementChildAdolescent">
+        <span class="control-indicator"></span>
+        5. Inaccessible
+      </label>
+    </div>
+
+    <div class="radio-group acceptanceAndEngagementParentPrimary">
+      <h2>VI-B. Acceptance and Engagement - Parent/Primary Caretaker </h2>
+      <label class="control radio">
+        <input type="radio" value="1" name="acceptanceAndEngagementParentPrimary" checked>
+        <span class="control-indicator"></span>
+        1. Optimal  
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="2" name="acceptanceAndEngagementParentPrimary">
+        <span class="control-indicator"></span>
+        2. Constructive 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="3" name="acceptanceAndEngagementParentPrimary">
+        <span class="control-indicator"></span>
+        3. Obstructive
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="4" name="acceptanceAndEngagementParentPrimary">
+        <span class="control-indicator"></span>
+        4. Destructive 
+      </label>
+
+      <label class="control radio">
+        <input type="radio" value="5" name="acceptanceAndEngagementParentPrimary">
+        <span class="control-indicator"></span>
+        5. Inaccessible
+      </label>
+    </div>
+
+    <div class="footer">
+      
+    </div>
+  </div>
+</body>
+</html>
